@@ -3,50 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Lab 02</title>
+    <title>Sawera Naz | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        /* Header */
+        header {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #0055a5;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* Main Section */
+        .container {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            margin: 15px auto;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #0055a5;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+<!-- UET Branding + Introduction -->
 <header>
-    <h1>Welcome to My Web Technologies Portfolio</h1>
-    <h3>Sawera Naz | UET Peshawar</h3>
+    <h1>Sawera Naz</h1>
+    <p>Student | Web Technology Lab Portfolio</p>
+    <p>University of Engineering & Technology (UET)</p>
 </header>
 
-<hr>
-
+<!-- Navigation -->
 <nav>
-    <a href="lab02.html">HTML Exercises</a> |
-    <a href="profile.html">Profile</a> |
-    <a href="schedule.html">Schedule</a> |
-    <a href="navigation.html">Navigation</a> |
-    <a href="registration.html">Registration</a>
+    <a href="profile.html">Profile</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="navigation.html">Navigation Menu</a>
+    <a href="registration.html">Registration Form</a>
+    <a href="https://github.com/" target="_blank">My GitHub</a>
 </nav>
 
-<hr>
+<!-- Portfolio Content -->
+<div class="container">
 
-<section>
-    <h2>About Me</h2>
-    <p>
-        I am a Computer Science student at UET Peshawar.
-        This website contains my Web Technologies Lab 02 work,
-        including HTML exercises, tables, forms, and navigation pages.
-    </p>
-</section>
+    <div class="card">
+        <h2>Professional Introduction</h2>
+        <p>
+            Hello! I am Sawera Naz, a university student passionate about
+            programming, Artificial Intelligence, and web development.
+            This portfolio showcases my Web Technology lab exercises
+            created using HTML5 and GitHub Pages.
+        </p>
+    </div>
 
-<hr>
+    <div class="card">
+        <h2>Lab Exercises</h2>
+        <p><a href="profile.html">Task 1 – Personal Profile Page</a></p>
+        <p><a href="schedule.html">Task 2 – Course Schedule Table</a></p>
+        <p><a href="navigation.html">Task 3 – Navigation Menu</a></p>
+        <p><a href="registration.html">Task 4 – Registration Form</a></p>
+    </div>
 
-<section>
-    <h2>My GitHub</h2>
-    <a href="https://github.com/" target="_blank">
-        Visit My GitHub Profile
-    </a>
-</section>
+    <div class="card">
+        <h2>GitHub Profile</h2>
+        <p>
+            Visit my GitHub to explore my projects and learning progress.
+        </p>
+        <a href="https://github.com/" target="_blank">Go to GitHub Profile</a>
+    </div>
 
-<hr>
+</div>
 
+<!-- Footer -->
 <footer>
-    <p>© 2026 Sawera Naz | Web Technologies Lab</p>
+    <p>© 2026 Sawera Naz | UET Student Portfolio</p>
 </footer>
 
 </body>
