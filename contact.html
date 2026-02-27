@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f8; padding: 50px; }
+        form { max-width: 500px; margin: auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; background: #0055a5; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="https://formspree.io/f/xlgwvjrv" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+        <p id="form-message"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const msg = document.getElementById('form-message');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    msg.textContent = "Message sent successfully!";
+                    msg.className = "success";
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        msg.textContent = "Error sending message.";
+                        msg.className = "error";
+                    });
+                }
+            }).catch(error => {
+                msg.textContent = "Error sending message.";
+                msg.className = "error";
+            });
+        });
+    </script>
+</body>
+</html>
