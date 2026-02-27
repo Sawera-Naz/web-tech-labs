@@ -7,9 +7,40 @@
 
     <style>
         body {
+            
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
+         header {
+        background-color: #003366;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    nav {
+        background-color: #0055a5;
+        text-align: center;
+        padding: 12px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 15px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: yellow;
+    }
+
+    .active {
+        background-color: white;
+        color: #0055a5 !important;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
 
         .container {
             width: 400px;
@@ -56,6 +87,17 @@
 </head>
 
 <body>
+    <header>
+    <h1>Sawera Naz - Web Technology Portfolio</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="navigation.html">Navigation</a>
+    <a href="registration.html"class="active">Registration</a>
+</nav>
 
 <div class="container">
     <h2>Student Registration Form</h2>
@@ -109,6 +151,8 @@
 
     </form>
 </div>
-
+<p style="text-align:center; margin-top: 20px;">
+    <a href="index.html">⬅ Back to Home</a>
+</p>
 </body>
 </html>
